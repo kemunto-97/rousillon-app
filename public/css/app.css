@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:grey;
+    padding: 25px;
+    margin: 0;
+    text-align: left;
+    }
+main {
+    background-color: pink;
+}
+nav {
+    padding: 0px;
+    background-color: white;
+    align-items: horizontal;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+aside {
+    background-color: yellow;
+    position: absolute;
+}
+
+div{
+    padding: 1px;
+}
+
