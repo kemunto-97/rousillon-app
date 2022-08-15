@@ -12,7 +12,7 @@
               <a class="nav-link {{ ($title=='Add Category') ? 'active':'' }}" href="javascript:void(0)" data-toggle="modal" id="newCategory" data-target="#categoriesModal">
                 <div class="form-group">
                   <button style="float: right" type="submit" 
-                    class="btn btn-primary" id="addPayment">Add New Category
+                    class="btn btn-primary" id="addCategory">Add New Category
                   </button>
                 </div>
                 </br>
@@ -29,15 +29,20 @@
                 <table id="showCategory" class="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Category</th>
                             <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
+                    <?php $count=1 ?>
+                      @foreach($categories as $row)
                         <tr>
-                            <td>Dessert</td>
-                            <td>12/04/2022</td>
+                            <td>{{$count++}}</td>    
+                            <td>{{$row['category_name']}}</td>
+                            <td>{{$row['created_at']}}</td>
                         </tr>
+                      @endforeach
                     </tbody>
                 </table>
                 </div>

@@ -13,7 +13,7 @@
               data-toggle="modal" id="newExpense" data-target="#expenseModal">
                 <div class="form-group">
                   <button style="float: right" type="submit" 
-                    class="btn btn-primary" id="addPayment">+ Add New Expense
+                    class="btn btn-primary" id="addExpense">+ Add New Expense
                   </button>
                 </div>
                 </br>
@@ -29,6 +29,7 @@
                 <table id="showExpense" class="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Expense</th>
                             <th>Type</th>
                             <th>Amount</th>
@@ -36,6 +37,16 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <?php $count=1 ?>
+                      @foreach($expenses as $row)
+                        <tr>
+                            <td>{{$count++}}</td>    
+                            <td>{{$row['expense']}}</td>
+                            <td>{{$row['type']}}</td>
+                            <td>{{$row['amount']}}</td>
+                            <td>{{$row['created_at']}}</td>
+                        </tr>
+                      @endforeach
                     </tbody>
                 </table>
                 </div>
@@ -50,7 +61,7 @@
                             <h5 class="modal-title" id="expenseModalLabel">Add Payment</h5>
                         </div>
                       <div class="modal-body">
-                          <form id="paymentForm" name="payment">
+                          <form id="expenseForm" name="expense">
                             {{ csrf_field() }}
                             
                             <div class="form-group">

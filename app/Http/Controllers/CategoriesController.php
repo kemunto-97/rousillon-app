@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Datatables;
 use Illuminate\Http\Request;
 use App\Models\categories;
+use Alert;
 
 class CategoriesController extends Controller
 {
@@ -28,6 +29,7 @@ class CategoriesController extends Controller
 
         ]);
         $categories = categories::create($storeData);
+        echo "Success";
 
     }
 }

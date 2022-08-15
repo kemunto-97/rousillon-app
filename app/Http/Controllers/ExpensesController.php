@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Datatables;
 use Illuminate\Http\Request;
 use App\Models\expenses;
+use Alert;
 
 class ExpensesController extends Controller
 {
@@ -29,6 +30,6 @@ class ExpensesController extends Controller
 
         ]);
         $expenses = expenses::create($storeData);
-
+        echo "Success";
     }
 }
