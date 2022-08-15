@@ -29,17 +29,24 @@
                 <table id="showCustomer" class="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Dee</td>
-                            <td>dee@mail.com</td>
-                            <td>075432123</td>
-                        </tr>
+                    <?php $count=1 ?>
+                      @foreach($customers as $row)
+                      <tr>
+                          <td>{{$count++}}</td>
+                          <td>{{$row['customer_name']}}</td>
+                          <td>{{$row['customer_email']}}</td>
+                          <td>{{$row['customer_phone']}}</td>
+                          <td>{{$row['created_at']}}</td>
+                      </tr>
+                      @endforeach
                     </tbody>
                 </table>
                 </div>
@@ -68,7 +75,7 @@
 
                             <div class="form-group">
                                 <label for="id">Phone:</label>
-                                <input type="number" class="form-control" id="phone" name="phone">
+                                <input type="number" class="form-control" id="customer_phone" name="customer_phone" required>
                             </div>
 
                             <div class="form-group">

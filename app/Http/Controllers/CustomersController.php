@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Datatables;
 use Illuminate\Http\Request;
 use App\Models\customers;
+use Alert;
 
 class CustomersController extends Controller
 {
@@ -29,6 +30,6 @@ class CustomersController extends Controller
 
         ]);
         $customers = customers::create($storeData);
-
+        echo "Success";
     }
 }

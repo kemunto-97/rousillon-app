@@ -10,6 +10,10 @@
         <link id="pagestyle" href="{{ asset('css/argon-dashboard.css') }}" rel="stylesheet" />
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+         <!-- SweetAlert Files -->
+        <link rel="stylesheet" href=" {{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
+        <!-- Datatables -->
+        <link rel="stylesheet" href=" {{ asset('vendor/datatables/datatables.min.css') }}">
 
     </head>
     <body class="antialiased">
